@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disease Prediction</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f7f7f7;
+      text-align: center;
+      margin-top: 50px;
+    }
+    form {
+      background: white;
+      display: inline-block;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 0px 10px #ccc;
+    }
+    input {
+      margin: 8px;
+      padding: 8px;
+      width: 200px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+    h2 {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Disease Prediction System</h1>
+  <form action="/predict" method="post">
+    <input type="text" name="Pregnancies" placeholder="Pregnancies" required><br>
+    <input type="text" name="Glucose" placeholder="Glucose" required><br>
+    <input type="text" name="BloodPressure" placeholder="Blood Pressure" required><br>
+    <input type="text" name="SkinThickness" placeholder="Skin Thickness" required><br>
+    <input type="text" name="Insulin" placeholder="Insulin" required><br>
+    <input type="text" name="BMI" placeholder="BMI" required><br>
+    <input type="text" name="DiabetesPedigreeFunction" placeholder="DPF" required><br>
+    <input type="text" name="Age" placeholder="Age" required><br>
+    <button type="submit">Predict</button>
+  </form>
+
+  <h2>{{ prediction_text }}</h2>
+</body>
+</html>
